@@ -1,17 +1,14 @@
 
-const ItemList = ({saludo, nuevoSaludo, persona}) => {
+const ItemList = ({saludo, saludoUsuario}) => {
 
-  let otroSal = "tonsqueee";
+  let input = "buenas bueeeeenas";
   
   return (
-
     <div>
+      <button onClick={()=> saludoUsuario(input)}>Saludar</button>
       <p>{saludo}</p>
-      <p>esto lo hizo {persona.nombre}, que tiene {persona.edad} anos</p>
-      <button onClick={()=> nuevoSaludo(otroSal)}>cambiar saludo</button>
     </div>
-
-  )
+  );
 }
 
 export default ItemList

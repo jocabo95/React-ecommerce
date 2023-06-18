@@ -1,28 +1,25 @@
-import Home from "./components/pages/home/home";
+import NavBar from "./components/layout/navbar/Navbar";
 import ItemList from "./components/pages/itemList/ItemList";
 import { useState } from "react";
 
+
 function App() {
 
-  let [saludo, setSaludo] = useState("hola, como estas")
+  let [saludo, setSaludo] = useState ("")
 
-  const nuevoSaludo = (nuevoSal) => {
-    setSaludo(nuevoSal)
+  let saludoUsuario = (greet) =>{
+    setSaludo(greet)
   }
 
   return (
 
     <div>
-      <Home />
-      <ItemList 
-      saludo={saludo} 
-      nuevoSaludo={nuevoSaludo}
-      persona={{nombre: "jose", edad:27}} 
-      />
-      <h2>{saludo}</h2>
+      <NavBar />
+      <ItemList saludo={saludo} saludoUsuario={saludoUsuario} />
     </div>
 
   );
+
 }
 
 
