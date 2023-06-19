@@ -1,0 +1,36 @@
+.navbar-list-container, .cart-container, .logo-container{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container{
+    justify-content: flex-end;
+    padding-right: 2.5%; /*avoids extra long navbar in huge viewports*/
+}
+
+#logo{
+    width: 50px;
+    margin-right: 0rem;
+    margin-left: auto;
+}
+
+.navbar-list-container {
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar-list-container > a {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-container{
+    justify-content: flex-start;
+    padding-left: 2.5%;
+}

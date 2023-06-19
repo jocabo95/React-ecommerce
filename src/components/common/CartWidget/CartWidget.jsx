@@ -6,7 +6,7 @@ const CartWidget = () => {
     <div>
 
         <Badge badgeContent={1} color="primary">
-            <BsCart color="white"/>
+            <BsCart color="white" />
         </Badge>
 
     </div>
