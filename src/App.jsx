@@ -1,7 +1,7 @@
 import NavBar from "./components/layout/navbar/Navbar";
 import ItemList from "./components/pages/itemList/ItemList";
 import { useState } from "react";
-
+import Counter from "./components/common/counter/Counter";
 
 function App() {
 
@@ -14,8 +14,8 @@ function App() {
   return (
 
     <div>
-      <NavBar />
       <ItemList saludo={saludo} saludoUsuario={saludoUsuario} />
+      <Counter />
     </div>
 
   );
