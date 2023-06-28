@@ -1,13 +1,14 @@
-/*Patron de diseno
-uso de component container and presentacionales*/
+// /*Patron de diseno
+// uso de component container and presentacionales*/
 
-// PRESENTACIONAL SOLO LLEVA EL HTML
-const Counter = (props) => {
+// // PRESENTACIONAL SOLO LLEVA EL HTML
+const Counter = ({contador, sumar, restar}) => {
   return (
     <div>
-      <button onClick={props.sumar}>sumar</button>
-      <h3>este es el {props.contador}</h3> 
-      <button onClick={props.restar}>restar</button>
+      <button onClick={sumar}>sumar</button>
+      <h3>{contador}</h3>
+      <button onClick={restar}>restar</button>
+      <button>agregar a carrito</button>
     </div>
   );
 }

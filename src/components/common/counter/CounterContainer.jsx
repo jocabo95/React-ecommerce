@@ -1,25 +1,25 @@
+//CONTAINER SOLO LLEVA LA LOGICA
+
+//CONTAINER SE RENDERIZA EN APP. PRESENTACIONAL ES HIJO DE CONTAINER
+
 import { useState } from "react";
 import Counter from "./Counter";
 
-// CONTAINER SOLO LLEVA LOGICA
-const CounterContainer = () => {
-  let [contador, setContador] = useState();
+const CounterContainer = ({stock, onAdd}) => {
+
+  const [contador, setContador] = useState(1);
 
   const sumar = () => {
-    setContador(contador + 1);
-  };
+    contador < stock ? setContador(contador+1) : alert("cantidad max");
+  }
 
-  const restar = () => {
-    setContador(contador - 1);
-  };
+  const restar =()=>{
+    contador > 1 && setContador(contador-1);
+  }
 
   return (
-    <Counter
-      contador={contador}
-      sumar={sumar}
-      restar={restar}
-    />
-  );
-};
+    <Counter contador={contador} sumar={sumar} restar={restar}/>
+  )
+}
 
-export default CounterContainer;
+export default CounterContainer
