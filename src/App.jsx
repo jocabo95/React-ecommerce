@@ -1,5 +1,6 @@
 import NavBar from "./components/layout/navbar/Navbar";
-import ItemListContainer from "./components/pages/itemList/itemListContainer";
+import FetchingData from "./components/pages/fetchingData/FetchingData";
+// import ItemListContainer from "./components/pages/itemList/itemListContainer";
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
 
     <div>
       <NavBar />
-      <ItemListContainer />
+      {/* <ItemListContainer /> */}
+      <FetchingData />
     </div>
 
   );
