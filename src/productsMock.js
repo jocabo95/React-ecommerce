@@ -26,4 +26,22 @@ export let products = [
     caterogry: "clasica",
     img: "https://www.suescalada.com/4127-thickbox_default/rock-set-1-10-stoppers-wild-country-.jpg",
   },
+  {
+    id: 4,
+    title: "Index Ascender",
+    price: 200000,
+    stock: 5,
+    description: "clack diamond",
+    caterogry: "otros",
+    img: "https://content.steepandcheap.com/images/items/900/BLD/BLD00BN/ANT.jpg",
+  },
+  {
+    id: 5,
+    title: "Zen pro shoe - men",
+    price: 600000,
+    stock: 3,
+    description: "Scarpa",
+    caterogry: "otros",
+    img: "https://content.steepandcheap.com/images/items/900/SCR/SCR000T/CHA.jpg",
+  },
 ];
