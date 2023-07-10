@@ -6,12 +6,11 @@ const ItemListContainer = () => {
 
   // crear variable para almacenar products
   const [items, setItems] = useState([]);
-  const [error, setError] = useState("");
 
   //useffect para manejar pedido a API. es muy pesado
   useEffect(()=>{
     //crear promesa
-    const tarea = new Promise((resolve, reject) => {
+    const tarea = new Promise((resolve) => {
       resolve(products);
     });
 
@@ -19,7 +18,6 @@ const ItemListContainer = () => {
     // .then() para resolve. .catch para reject
     tarea
         .then((respuesta) => {setItems(respuesta)})
-        .catch((error) => {setError(error)});
       
   }, [])
 

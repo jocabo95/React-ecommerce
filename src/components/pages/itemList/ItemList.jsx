@@ -3,11 +3,9 @@ import ProductCard from "../../common/ProductCard/ProductCard";
 
 const ItemList = ({items}) => {
 
-  console.log({items});
-
   return (
     <div>
-      <h1>Aca van los productos</h1>
+      <h1>Productos</h1>
 
       <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem"}}>
 
