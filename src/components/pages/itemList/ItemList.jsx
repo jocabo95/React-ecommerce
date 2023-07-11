@@ -5,9 +5,8 @@ const ItemList = ({items}) => {
 
   return (
     <div>
-      <h1>Productos</h1>
 
-      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem"}}>
+      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem", paddingTop:"120px", paddingBottom:"5rem"}}>
 
         {items.map((item) => {
           return (
