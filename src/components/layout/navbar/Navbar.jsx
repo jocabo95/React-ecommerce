@@ -17,24 +17,22 @@ const NavBar =()=>{
           {/* logo */}
           <Grid item xs={2} md={1} className="logo-container">
             <Link to="/">
-              <a>
                 <img id="logo" src={logo} alt="logo" />
-              </a>
             </Link>
           </Grid>
 
           {/* nav links */}
           <Grid item xs={8} md={10}>
             <ul className="navbar-list-container">
-              <a href="#">
+              <Link to="/category/Clásica">
                 <li className="navbar-list-item">Clásica</li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/category/Deportiva">
                 <li className="navbar-list-item">Deportiva</li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/category/Otros">
                 <li className="navbar-list-item">Otros</li>
-              </a>
+              </Link>
             </ul>
           </Grid>
 
