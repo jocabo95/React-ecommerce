@@ -6,7 +6,7 @@ const ItemList = ({items}) => {
   return (
     <div>
 
-      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem", paddingTop:"120px", paddingBottom:"5rem"}}>
+      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem", paddingTop:"2rem", paddingBottom:"5rem"}}>
 
         {items.map((item) => {
           return (

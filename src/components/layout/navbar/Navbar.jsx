@@ -11,7 +11,7 @@ const NavBar =()=>{
   return (
 
     <div>
-      <Box sx={{ position:"fixed", width:"100%", backgroundColor: "black", color: "white", paddingTop: "0.2rem", paddingBottom: "0.2rem" }}>
+      <Box sx={{width:"100%", backgroundColor: "black", color: "white", paddingTop: "0.2rem", paddingBottom: "0.2rem" }}>
         <Grid container>
 
           {/* logo */}

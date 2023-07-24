@@ -21,11 +21,19 @@ const ItemDetail = () => {
         tarea.then((res)=>setProducto(res))
     }, [id])    
 
+    const addCart =()=>{
+        console.log(
+          products.find((elemento) => {
+            return elemento.id === +id;
+          })
+        );
+    }
   return (
     <div>
         <h2>{producto.title}</h2>
         <h3>{producto.price}</h3>
         <CounterContainer />
+        <button onClick={addCart}>Agregar a carrito</button>
     </div>
   )
 }

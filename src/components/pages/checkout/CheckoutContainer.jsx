@@ -1,43 +1,47 @@
 import { useState } from "react";
 
 const CheckoutContainer = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
+  
+  const[data,setData]=useState({
+    nombre:"", // keys deben ser iguales a name de input
+    apellido:""
+  })
 
-  const enviarform = (event) => {
+  // BPM handleSubmit para validaciones (ej: determinar si password es valida al final)
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log("se envio");
+    console.log(data)
   };
 
-  const capturarNombre = (event) => {
-    setNombre(event.target.value);
+  // BPM handleChange para manejar cambios
+  const handleChange = (event) => {
+    setData({...data, [event.target.name]: event.target.value})
   };
-
-  const capturarApellido = (event) => {
-    setApellido(event.target.value);
-  };
-
+  
   return (
+
     <div>
       <h1>Checkout</h1>
-      <form onSubmit={enviarform}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="name"
           name="nombre"
-          onChange={capturarNombre}
+          onChange={handleChange}
         />
-        <p>{nombre}</p>
+        <p>{data.nombre}</p>
         <input
           type="text"
           placeholder="apellido"
           name="apellido"
-          onChange={capturarApellido}
+          onChange={handleChange}
         />
-        <p>{apellido}</p>
+        <p>{data.apellido}</p>
         <button type="submit">Enviar</button>
       </form>
     </div>
+    
   );
 };
 

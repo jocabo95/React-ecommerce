@@ -11,8 +11,7 @@ const ItemListContainer = () => {
   const {name} = useParams();
 
 
-
-  //useffect para manejar pedido a API. es muy pesado
+  //useffect para manejar pedido a API. es muy pesado.
   useEffect(()=>{
 
     let filtradosCategoria = products.filter((el)=>{

@@ -7,11 +7,11 @@ const CounterContainer = () => {
     const [counter, setCounter]=useState(1);
 
     let sumar = () =>{
-        setCounter(counter+1)
+      setCounter(counter+1)
     }
 
     let restar = () => {
-        setCounter(counter-1)
+      counter > 1 ? setCounter(counter-1): setCounter(counter)
     }
 
   return (
