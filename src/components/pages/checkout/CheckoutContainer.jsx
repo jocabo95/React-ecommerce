@@ -11,6 +11,7 @@ const CheckoutContainer = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("se envio");
+    console.log(event)
     console.log(data)
   };
 

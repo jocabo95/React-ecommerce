@@ -1,14 +1,20 @@
 import {BsCart} from "react-icons/bs"
 import { Badge } from "@mui/material"
+import { useContext } from "react"
+import { CartContext } from "../../../context/CartContext"
+import { Link } from "react-router-dom"
 
 const CartWidget = () => {
+
+  const {cart} = useContext(CartContext);
+
   return (
     <div>
-
-        <Badge badgeContent={1} color="primary">
+      <Link to="/cart">
+        <Badge badgeContent={cart.length} color="primary">
             <BsCart color="white" />
         </Badge>
-
+      </Link>
     </div>
   )
 }

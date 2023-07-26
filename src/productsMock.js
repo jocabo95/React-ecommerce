@@ -3,7 +3,7 @@ export let products = [
     id: 1,
     title: "Cintas express 15cm",
     price: 300000,
-    stock: 2,
+    stock: 6,
     description: "Black diamond",
     category: "Deportiva",
     img: "https://www.bfgcdn.com/1500_1500_90/319-0388/black-diamond-miniwire-quickpack-quickdraw.jpg",
