@@ -3,6 +3,8 @@ import { products } from "../../../productsMock";
 import ItemList from "./ItemList";
 import { useParams } from "react-router";
 
+
+
 const ItemListContainer = () => {
 
   // crear variable para almacenar products
@@ -17,9 +19,12 @@ const ItemListContainer = () => {
     let filtradosCategoria = products.filter((el)=>{
       return el.category === name
     })
+
     //crear promesa
     const tarea = new Promise((resolve) => {
-      resolve(name === undefined ? products : filtradosCategoria );
+      setTimeout(()=>{
+        resolve(name === undefined ? products : filtradosCategoria);
+      }, 2000)
     });
 
     // manipular promesa(que hago con la resp de la promesa) .then() y .catch(). METODS ENCADENABLES
@@ -29,7 +34,12 @@ const ItemListContainer = () => {
       
   }, [name])
 
+  //return temprano para cargar eskeleto de loading
+
+  
   return <ItemList items={items}/>;
+  
+
 };
 
 export default ItemListContainer;

@@ -6,12 +6,14 @@ import { Link } from "react-router-dom"
 
 const CartWidget = () => {
 
-  const {cart} = useContext(CartContext);
+  const {cart, unidadesTotales} = useContext(CartContext);
+
+  let unidadesCarrito = unidadesTotales();
 
   return (
     <div>
       <Link to="/cart">
-        <Badge badgeContent={cart.length} color="primary">
+        <Badge badgeContent={unidadesCarrito} color="primary">
             <BsCart color="white" />
         </Badge>
       </Link>

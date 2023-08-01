@@ -15,7 +15,7 @@ const CartContextProvider = ({children}) => {
     if (existe) {
       let newCart = cart.map((el) => {
         if (el.id === item.id) {
-          return { ...el, quantity: el.quantity + item.quantity };
+          return { ...el, quantity: item.quantity };
         } else {
           return el;
         }
@@ -38,6 +38,7 @@ const CartContextProvider = ({children}) => {
   //borrar todos los items del carrito
   const clearCart = () => {
     setCart([]);
+
   };
 
   // borrar solo 1 producto de carrito
@@ -51,7 +52,37 @@ const CartContextProvider = ({children}) => {
     setCart(newArr);
   };
 
-  let data = { cart, addToCart, clearCart, deleteById }; //forma m[as efectiva de pasar info a children]
+  const totalPrice = () =>{
+    let total = cart.reduce((acc, el)=>{
+      return acc + (el.price * el.quantity)
+    }, 0)
+    return total
+  }
+
+  const unidadesTotales = ()=>{
+    const total = cart.reduce ((acc, el)=>{
+      return acc + el.quantity
+    }, 0)
+    return total
+  }
+
+  // determinar un en carrito de producto para evitar sobrepasar stock por doble adicion
+  const getQuantityById =(id)=>{
+
+    const product = cart.find((el)=> el.id === +id )
+    return product ? product.quantity : 1 //si product es truthy sacar quantity {else} product counter empieza en 1
+  
+  }
+
+  let data = {
+    cart,
+    addToCart,
+    clearCart,
+    deleteById,
+    totalPrice,
+    unidadesTotales,
+    getQuantityById
+  }; //forma m[as efectiva de pasar info a children]
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 }
