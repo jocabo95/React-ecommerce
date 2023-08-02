@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from "react"
 import CounterContainer from "../../common/counter/CounterContainer"
-import { products } from "../../../productsMock";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
 import { useParams } from "react-router";
+import { db } from "../../../firebaseCofing";
+import {getDoc, collection, doc} from "firebase/firestore"
 
 const ItemDetail = () => {
 
@@ -16,15 +17,14 @@ const ItemDetail = () => {
   const totalQuantity = getQuantityById(id);
 
   useEffect(()=>{
-      let productoSeleccionado = products.find((elemento)=>{
-          return elemento.id === +id;
-      });
 
-      const tarea = new Promise((res, rej) => {
-          res(productoSeleccionado)
-      });
+    let productCollection = collection(db, "products");
+    let productRef = doc(productCollection, id)
 
-      tarea.then((res)=>setProducto(res))
+    getDoc(productRef).then((res)=>{
+      setProducto({id: res.id, ...res.data()})
+    })
+    
   }, [id])    
 
   //manda cuantas un de un articulo se quieren enviar al carrito
@@ -47,9 +47,27 @@ const ItemDetail = () => {
     <div>
         <h2>{producto.title}</h2>
         <h3>{producto.price}</h3>
-        <CounterContainer stock={producto.stock} onAdd={onAdd} initialQuantity={totalQuantity}/>
+
+        {/* mostrar counter solo si hay stock */}
+        {
+          producto.stock > 0 ?  <CounterContainer stock={producto.stock} onAdd={onAdd} initialQuantity={totalQuantity}/> : <h5>Sin stock</h5>
+        }
+
     </div>
   )
 }
 
 export default ItemDetail
+
+//USEFFECT SIN FIREBASE
+// useEffect(() => {
+//   let productoSeleccionado = products.find((elemento) => {
+//     return elemento.id === +id;
+//   });
+
+//   const tarea = new Promise((res, rej) => {
+//     res(productoSeleccionado);
+//   });
+
+//   tarea.then((res) => setProducto(res));
+// }, [id]); 
