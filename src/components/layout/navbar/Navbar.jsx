@@ -44,8 +44,7 @@ const NavBar =()=>{
         </Grid>
       </Box>
 
-      {/* render navbar children from .app */}
-      <Outlet />
+      
     </div>
 
   );
