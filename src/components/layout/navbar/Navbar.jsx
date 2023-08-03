@@ -2,7 +2,6 @@ import { Box, Grid } from "@mui/material";
 import logo from "../../../assets/images/logo.png"
 import CartWidget from "../../common/CartWidget/CartWidget";
 import "./Navbar.css";
-import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 
 
