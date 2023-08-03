@@ -10,7 +10,7 @@ const ItemList = ({items}) => {
   return (
     <div>
 
-      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem", paddingTop:"2rem", paddingBottom:"5rem"}}>
+      <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem", paddingTop:"80px", paddingBottom:"5rem"}}>
 
         {/* Ternario para decidir si display products o skelleton */}
         {items.length > 0 ? items.map((item)=>{
