@@ -1,6 +1,5 @@
 export let products = [
   {
-    id: 1,
     title: "Cintas express 15cm",
     price: 300000,
     stock: 6,
@@ -9,7 +8,6 @@ export let products = [
     img: "https://www.bfgcdn.com/1500_1500_90/319-0388/black-diamond-miniwire-quickpack-quickdraw.jpg",
   },
   {
-    id: 2,
     title: "Camalot #0.5",
     price: 150000,
     stock: 4,
@@ -18,7 +16,6 @@ export let products = [
     img: "https://cdn11.bigcommerce.com/s-hgn1l9sh63/images/stencil/1000w/attribute_rule_images/9097_source_1687931236.png",
   },
   {
-    id: 3,
     title: "Stoppers set",
     price: 60000,
     stock: 1,
@@ -27,7 +24,6 @@ export let products = [
     img: "https://www.suescalada.com/4127-thickbox_default/rock-set-1-10-stoppers-wild-country-.jpg",
   },
   {
-    id: 4,
     title: "Vector Helmet",
     price: 300000,
     stock: 1,
@@ -36,7 +32,6 @@ export let products = [
     img: "https://content.steepandcheap.com/images/items/900/BLD/BLD1409/OCT.jpg",
   },
   {
-    id: 5,
     title: "Index Ascender",
     price: 350000,
     stock: 5,
@@ -45,7 +40,6 @@ export let products = [
     img: "https://content.steepandcheap.com/images/items/900/BLD/BLD00BN/BDOR.jpg",
   },
   {
-    id: 6,
     title: "Zero friend set 0.4-0.75",
     price: 1200000,
     stock: 2,

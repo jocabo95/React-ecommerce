@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 
@@ -51,6 +52,7 @@ const CartContainer = () => {
       {/* condicional para solo mostrar "limpiar todo" cuando haya items en carrito */}
       {cart.length > 0 && <button onClick={limpiarCarrito}>limpiar carrito</button>}
 
+      <Link to="/checkout">Finalizar compra</Link>
     </div>
   );
 }
