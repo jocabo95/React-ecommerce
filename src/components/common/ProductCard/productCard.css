@@ -1,0 +1,26 @@
+.card {
+  width: 33%;
+  max-width: 250px;
+  border: solid thin #e3e5e3;
+}
+
+.card:hover {
+  transition: all 0.3s;
+}
+.card:hover .productCard-title, .card:hover .productCard-description {
+  transition: all 0.1s;
+  color: #FF7E67;
+}
+
+.product-img-container {
+  width: auto;
+  margin: 10px 5px 0px 5px;
+  padding-bottom: 10px;
+  border-bottom: solid #f2f2f3;
+  background-color: white;
+}
+
+#card-img {
+  height: 140px;
+  object-fit: contain;
+}/*# sourceMappingURL=productCard.css.map */

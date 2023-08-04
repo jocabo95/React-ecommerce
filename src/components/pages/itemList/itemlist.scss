@@ -1,9 +1,12 @@
 $main-color: #666859;
 $details: #FF7E67;
 $text-secondary: #e3e5e3;
+$background-color: #f2f3f2;
 
 .itemlist-container{
     width: 100%;
     height: auto;
     min-height: 100vh;
+
+    background-color: $background-color ;
 }

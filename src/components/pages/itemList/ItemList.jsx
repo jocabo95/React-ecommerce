@@ -1,6 +1,6 @@
 import { Skeleton } from "@mui/material";
 import ProductCard from "../../common/ProductCard/ProductCard";
-
+import "./itemlist.css"
 
 const ItemList = ({items}) => {
 
