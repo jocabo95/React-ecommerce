@@ -8,7 +8,7 @@ const ItemList = ({items}) => {
   const arr = [1, 2, 3, 4]
 
   return (
-    <div>
+    <div className="itemlist-container">
 
       <div style={{display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "2rem", paddingTop:"80px", paddingBottom:"5rem"}}>
 
