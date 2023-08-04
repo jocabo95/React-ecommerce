@@ -1,0 +1,67 @@
+#counter-container {
+  margin-bottom: 15px;
+}
+
+#counter {
+  display: flex;
+  margin-bottom: 20px;
+}
+#counter .counter-number, #counter .counter-button {
+  border-top: solid thin #666859;
+  border-bottom: solid thin #666859;
+  text-align: center;
+}
+#counter .counter-number {
+  width: 60px;
+  height: 2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#counter .counter-button {
+  width: 40px;
+  height: 2rem;
+  font-size: 1.2rem;
+  background-color: white;
+}
+#counter #minusButton {
+  margin-left: 10px;
+  border-right: none;
+  border-radius: 15px 0px 0px 15px;
+}
+#counter .counter-button:hover {
+  transition: all 0.2s;
+  background-color: #e3e5e3;
+}
+#counter #plusButton {
+  border-left: none;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.buy-button {
+  width: calc(100% - 20px);
+  height: 2.2rem;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: solid thin #666859;
+  background-color: #666859;
+  color: #e3e5e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.buy-button:hover {
+  transition: all 0.2s;
+  background-color: rgba(102, 104, 89, 0.8392156863);
+}
+
+.buy-button:active {
+  transition: all 0.2s;
+  background-color: #666859;
+  color: #666859;
+}/*# sourceMappingURL=counter.css.map */

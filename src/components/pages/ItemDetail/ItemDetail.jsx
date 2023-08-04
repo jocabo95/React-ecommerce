@@ -1,60 +1,71 @@
-import { useContext, useEffect, useState } from "react"
+import { Skeleton } from "@mui/material";
 import CounterContainer from "../../common/counter/CounterContainer"
-import { CartContext } from "../../../context/CartContext";
-import Swal from "sweetalert2";
-import { useParams } from "react-router";
-import { db } from "../../../firebaseCofing";
-import {getDoc, collection, doc} from "firebase/firestore"
+import "./itemDetail.css"
+import { NumericFormat } from "react-number-format";
 
-const ItemDetail = () => {
+const ItemDetail = ({data}) => {
+  const arr = [1, 2, 3, 4];
 
-  const [producto, setProducto] = useState({})
-  const { addToCart, getQuantityById} = useContext(CartContext);
-
-  const {id} = useParams()
-
-  //un totales de un producto en carrito
-  const totalQuantity = getQuantityById(id);
-
-  useEffect(()=>{
-
-    let productCollection = collection(db, "products");
-    let productRef = doc(productCollection, id)
-
-    getDoc(productRef).then((res)=>{
-      setProducto({id: res.id, ...res.data()})
-    })
-    
-  }, [id])    
-
-  //manda cuantas un de un articulo se quieren enviar al carrito
-  const onAdd =(cantidad)=>{
-    
-    let productCart = {...producto, quantity: cantidad};
-    addToCart(productCart); // contexto global
-
-    // disparar alerta
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Producto agregado al carrito",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-  }
+  // data se tiene que destructurar por furea de props
+  const {producto, onAdd, totalQuantity} = data;
 
   return (
-    <div>
-        <h2>{producto.title}</h2>
-        <h3>{producto.price}</h3>
+    <div id="itemDetail">
+      {/* render condicional para cuando producto no se actualice de db */}
+      {producto ? (
+        <div id="itemDetail-card">
+          <div id="itemDetail-imgContainer">
+            <img
+              id="itemDetail-img"
+              src={producto.img}
+              alt="producto.descripcion"
+            />
+          </div>
 
-        {/* mostrar counter solo si hay stock */}
-        {
-          producto.stock > 0 ?  <CounterContainer stock={producto.stock} onAdd={onAdd} initialQuantity={totalQuantity}/> : <h5>Sin stock</h5>
-        }
+          <div id="itemDetail-description">
+            <h1 className="cardText" id="itemDetail-title">
+              {producto.title}
+            </h1>
+            <p className="cardText" id="itemDetail-brand">
+              {producto.description}
+            </p>
+            <p className="cardText" id="itemDetail-price">
+              <NumericFormat
+                value={producto.price}
+                displayType={"text"}
+                thousandSeparator={true}
+                prefix={"$"}
+                suffix=" COP"
+              />
+            </p>
+          </div>
 
+          {/* mostrar counter solo si hay stock */}
+          {producto.stock > 0 ? (
+            <CounterContainer
+              stock={producto.stock}
+              onAdd={onAdd}
+              initialQuantity={totalQuantity}
+            />
+          ) : (
+            <h5>Sin stock</h5>
+          )}
+        </div>
+      ) : (
+        // si producto === undefined
+        arr.map((el) => {
+          return (
+            <div key={el}>
+              <Skeleton variant="rectangular" sx={{ fontSize: "3rem" }} />
+              <Skeleton variant="text" width={90} height={40} />
+              <Skeleton variant="text" width={210} height={60} />
+              <Skeleton variant="text" width={210} height={60} />
+            </div>
+          );
+        })
+      )}
     </div>
-  )
+  );
 }
 
 export default ItemDetail
