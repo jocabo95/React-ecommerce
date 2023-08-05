@@ -6,9 +6,7 @@ const CounterContainer = ({ stock, onAdd, initialQuantity }) => {
   const [counter, setCounter] = useState(initialQuantity);
 
   const sumar = () => {
-    console.log("counter=", counter, "stock=", stock);
     counter < stock ? setCounter(counter + 1) : alert("No hay stock");
-    console.log(initialQuantity)
   };
 
   const restar = () => {

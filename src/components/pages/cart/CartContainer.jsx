@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 
 
@@ -33,27 +33,15 @@ const CartContainer = () => {
 
   }
 
+  const data ={
+    cart,
+    total,
+    deleteById,
+    limpiarCarrito
+  }
 
   return (
-    <div>
-      <h1>Carritooo</h1>
-      {cart.map((el) => {
-        return (
-          <div key={el.id}>
-            <h3>Producto: {el.title}</h3>
-            <h4>Precio: {el.price}</h4>
-            <h5>Cantidad: {el.quantity}</h5>
-            <h5>El total es {total}</h5>
-            <button onClick={() => deleteById(el.id)}>eliminar</button>
-          </div>
-        );
-      })}
-      
-      {/* condicional para solo mostrar "limpiar todo" cuando haya items en carrito */}
-      {cart.length > 0 && <button onClick={limpiarCarrito}>limpiar carrito</button>}
-
-      <Link to="/checkout">Finalizar compra</Link>
-    </div>
+    <Cart data={data}/>
   );
 }
 

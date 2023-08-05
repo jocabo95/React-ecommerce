@@ -43,6 +43,7 @@ const CartContextProvider = ({children}) => {
 
   // borrar solo 1 producto de carrito
   const deleteById = (id) => {
+    console.log("id", id);
 
     let newArr = cart.filter((el) => {
       return el.id !== id;
@@ -68,7 +69,7 @@ const CartContextProvider = ({children}) => {
   // determinar un en carrito de producto para evitar sobrepasar stock por doble adicion
   const getQuantityById =(id)=>{
 
-    const product = cart.find((el)=> el.id === id )
+    const product = cart.find((el)=> el.id === id)
     return product ? product.quantity : 1 //si product es truthy sacar quantity {else} product counter empieza en 1
   
   }
