@@ -23,9 +23,9 @@ const ItemDetail = ({data}) => {
           </div>
 
           <div id="itemDetail-description">
-            <h1 className="cardText" id="itemDetail-title">
+            <h2 className="cardText" id="itemDetail-title">
               {producto.title}
-            </h1>
+            </h2>
             <p className="cardText" id="itemDetail-brand">
               {producto.description}
             </p>

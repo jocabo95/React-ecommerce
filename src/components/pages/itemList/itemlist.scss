@@ -10,3 +10,89 @@ $background-color: #f2f3f2;
 
     background-color: $background-color ;
 }
+
+h1{
+    font-family: 'Antonio', sans-serif;
+    letter-spacing: 5px;
+}
+
+h2, h3, h4, h5{
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: 'PT Sans', sans-serif;
+}
+
+#home-imgContainer{
+
+    height: 200px;
+    
+    position: relative;
+    top: 60px;
+    left: 0;
+
+    opacity: 0.9;
+
+    background-image: url(//res.cloudinary.com/drr0x3v88/image/upload/v1691207562/React%20-%20rock%20climbing%20ecommerce/saalbach-tristkogel-november2020-c-daniel-roos_33_2x_iseqoa.webp);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: black;
+    text-shadow: 2px 1px 5px black;
+    
+}
+
+#home-img{
+    object-fit: contain;
+    width: 100%;
+    
+}
+
+#categories{
+    position: relative;
+    top: 70px;
+    border: solid thin $text-secondary;
+
+    height: 2rem;
+    width: calc(100% - 20px);
+
+    margin-left: 10px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-list-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-list-item{
+    width: 90px;
+    height: 1.5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: solid thin $text-secondary;
+    border-radius: 5px;
+    background-color: $text-secondary;
+    color: $main-color;
+
+   
+}
+

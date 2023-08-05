@@ -10,9 +10,9 @@ const Cart = ({data}) => {
   return (
     <div id="cart">
       <div id="cart-container">
-        <h1 id="cart-title" className="cart-text">
+        <h2 id="cart-title" className="cart-text">
           Carrito
-        </h1>
+        </h2>
         {cart.map((el) => {
           return (
             <div id="cart-itemContainer" key={el.id}>

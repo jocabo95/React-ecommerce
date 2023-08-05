@@ -32,12 +32,10 @@ $text-secondary: #e3e5e3;
     list-style: none;
 }
 
-.navbar-list-container>a {
-    text-decoration: none;
-    color: white;
-}
-
 .cart-container {
     justify-content: flex-start;
     padding-left: 2.5%;
+
+    position: relative;
+    right: -75%;
 }

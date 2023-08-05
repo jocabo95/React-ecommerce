@@ -47,4 +47,12 @@ export let products = [
     category: "Clásica",
     img: "https://www.wildcountry.com/media/image/b1/d1/50/d2b6cf34-822f-4bc7-8c9e-ed6e859dee9b_wildcountry_350x350@2x.jpg",
   },
+  {
+    title: "Tommy Caldwell Pro Dry DT Climbing Rope - 9.6mm",
+    price: 700000,
+    stock: 4,
+    description: "Edelrid",
+    category: "Otros",
+    img: "https://res.cloudinary.com/drr0x3v88/image/upload/v1691210718/React%20-%20rock%20climbing%20ecommerce/NEOGN_en2zfi.avif",
+  },
 ];
