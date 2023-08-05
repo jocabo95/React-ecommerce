@@ -31,7 +31,7 @@
 #cart-itemContainer {
   border: solid thin #e3e5e3;
   width: 90%;
-  margin-bottom: 15px;
+  margin: 0px auto 15px auto;
 }
 
 #cart-item {
