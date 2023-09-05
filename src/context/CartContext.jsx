@@ -43,7 +43,6 @@ const CartContextProvider = ({children}) => {
 
   // borrar solo 1 producto de carrito
   const deleteById = (id) => {
-    console.log("id", id);
 
     let newArr = cart.filter((el) => {
       return el.id !== id;
