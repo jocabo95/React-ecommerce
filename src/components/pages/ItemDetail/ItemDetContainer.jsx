@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import ItemDetail from "./ItemDetail";
 
 
-const ItemDetailContainer = () => {
+const ItemDetContainer = () => {
 
   const [producto, setProducto] = useState({});
   const { addToCart, getQuantityById } = useContext(CartContext);
@@ -58,4 +58,4 @@ const ItemDetailContainer = () => {
   )
 }
 
-export default ItemDetailContainer
+export default ItemDetContainer
