@@ -18,7 +18,7 @@ export const routes =[
     },
     {
         id: "itemdetail",
-        path: "/itemDetail/:id",
+        path: "/detail/:id",
         Element: ItemDetailContainer
     },
     {
