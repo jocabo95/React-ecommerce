@@ -9,31 +9,31 @@ export const routes = [
     id: "home",
     path: "/",
     // Element tiene que tener caps en primera para ser identificado como component
-    Element: ItemListContainer
+    Element: ItemListContainer,
   },
   {
     id: "cart",
     path: "/cart",
-    Element: CartContainer
-  },
-  {
-    id: "itemdetail",
-    path: "/itemDetail/:id",
-    Element: ItemDetailContainer
+    Element: CartContainer,
   },
   {
     id: "category",
     path: "/category/:name",
-    Element: ItemListContainer
+    Element: ItemListContainer,
+  },
+  {
+    id: "itemdetail",
+    path: "/itemDetail/:id",
+    Element: ItemDetailContainer,
   },
   {
     id: "checkout",
     path: "/checkout",
-    Element: CheckoutContainer
+    Element: CheckoutContainer,
   },
   {
     id: "dashboard",
     path: "/dashboard",
-    Element: Dashboard
-  }
+    Element: Dashboard,
+  },
 ];
