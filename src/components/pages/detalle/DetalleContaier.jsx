@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { useParams } from "react-router";
-import { collection, doc, getDoc } from "@firebase/firestore";
+import { useParams } from "react-router-dom";
+import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebaseCofing";
 import Swal from "sweetalert2";
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../itemDetail/ItemDetail";
 
 
-const ItemDetContainer = () => {
-
+const DetalleContainer = () => {
   const [producto, setProducto] = useState({});
   const { addToCart, getQuantityById } = useContext(CartContext);
 
@@ -24,7 +23,6 @@ const ItemDetContainer = () => {
     getDoc(productRef).then((res) => {
       setProducto({ id: res.id, ...res.data() });
     });
-
   }, [id, producto]);
 
   //manda cuantas un de un articulo se quieren enviar al carrito
@@ -42,20 +40,20 @@ const ItemDetContainer = () => {
     });
   };
 
-  const data ={
+  const data = {
     producto,
     setProducto,
     addToCart,
     getQuantityById,
     totalQuantity,
-    onAdd
-  }
+    onAdd,
+  };
 
   return (
     <div>
-      <ItemDetail data={data}/>
+      <ItemDetail data={data} />
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetContainer
+export default DetalleContainer;
