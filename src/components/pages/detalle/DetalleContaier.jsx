@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebaseCofing";
 import Swal from "sweetalert2";
-import ItemDetail from "../itemDetail/ItemDetail";
+import Detalle from "./Detalle";
 
 
 const DetalleContainer = () => {
@@ -51,7 +51,7 @@ const DetalleContainer = () => {
 
   return (
     <div>
-      <ItemDetail data={data} />
+      <Detalle data={data} />
     </div>
   );
 };

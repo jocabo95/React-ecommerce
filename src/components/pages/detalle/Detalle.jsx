@@ -1,13 +1,14 @@
-import { Skeleton } from "@mui/material";
-import CounterContainer from "../../common/counter/CounterContainer"
-import "./itemDetail.css"
 import { NumericFormat } from "react-number-format";
+import CounterContainer from "../../common/counter/CounterContainer";
+import { Skeleton } from "@mui/material";
+import "./detalle.css"
 
-const ItemDetail = ({data}) => {
+
+const Detalle = ({ data }) => {
   const arr = [1, 2, 3, 4];
 
   // data se tiene que destructurar por furea de props
-  const {producto, onAdd, totalQuantity} = data;
+  const { producto, onAdd, totalQuantity } = data;
 
   return (
     <div id="itemDetail">
@@ -66,9 +67,9 @@ const ItemDetail = ({data}) => {
       )}
     </div>
   );
-}
+};
 
-export default ItemDetail
+export default Detalle;
 
 //USEFFECT SIN FIREBASE
 // useEffect(() => {
@@ -81,4 +82,4 @@ export default ItemDetail
 //   });
 
 //   tarea.then((res) => setProducto(res));
-// }, [id]); 
+// }, [id]);

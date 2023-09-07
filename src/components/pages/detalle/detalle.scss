@@ -3,7 +3,7 @@ $details: #FF7E67;
 $text-secondary: #e3e5e3;
 $background-color: #f2f3f2;
 
-#itemDetail{
+#itemDetail {
     width: 100%;
     height: auto;
 
@@ -17,7 +17,7 @@ $background-color: #f2f3f2;
     background-color: $background-color;
 }
 
-#itemDetail-card{
+#itemDetail-card {
     border: solid thin $text-secondary;
 
     width: 80%;
@@ -27,7 +27,7 @@ $background-color: #f2f3f2;
     background-color: white;
 }
 
-#itemDetail-imgContainer{
+#itemDetail-imgContainer {
     width: auto;
     height: auto;
     min-height: 50%;
@@ -36,33 +36,33 @@ $background-color: #f2f3f2;
 
     display: flex;
     justify-content: center;
-    
+
     border-bottom: solid $text-secondary;
 }
 
-#itemDetail-img{
+#itemDetail-img {
     width: 300px;
     object-fit: contain;
 }
 
-#itemDetail-description{
+#itemDetail-description {
     width: auto;
     height: auto;
 
     margin-left: 10px;
 
-    #itemDetail-title{
+    #itemDetail-title {
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 5px;
     }
 
-    #itemDetail-brand{
+    #itemDetail-brand {
         font-size: 1.2rem;
         margin-bottom: 20px;
     }
 
-    #itemDetail-price{
+    #itemDetail-price {
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 20px;
