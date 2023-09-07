@@ -10,7 +10,10 @@ h1 {
   letter-spacing: 5px;
 }
 
-h2, h3, h4, h5 {
+h2,
+h3,
+h4,
+h5 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -72,4 +75,4 @@ p {
   border-radius: 5px;
   background-color: #e3e5e3;
   color: #666859;
-}/*# sourceMappingURL=itemlist.css.map */
+}/*# sourceMappingURL=list.css.map */

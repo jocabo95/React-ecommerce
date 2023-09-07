@@ -3,7 +3,7 @@ $details: #FF7E67;
 $text-secondary: #e3e5e3;
 $background-color: #f2f3f2;
 
-.itemlist-container{
+.itemlist-container {
     width: 100%;
     height: auto;
     min-height: 100vh;
@@ -11,23 +11,26 @@ $background-color: #f2f3f2;
     background-color: $background-color ;
 }
 
-h1{
+h1 {
     font-family: 'Antonio', sans-serif;
     letter-spacing: 5px;
 }
 
-h2, h3, h4, h5{
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Raleway', sans-serif;
 }
 
-p{
+p {
     font-family: 'PT Sans', sans-serif;
 }
 
-#home-imgContainer{
+#home-imgContainer {
 
     height: 200px;
-    
+
     position: relative;
     top: 60px;
     left: 0;
@@ -46,16 +49,16 @@ p{
     color: white;
     background-color: black;
     text-shadow: 2px 1px 5px black;
-    
+
 }
 
-#home-img{
+#home-img {
     object-fit: contain;
     width: 100%;
-    
+
 }
 
-#categories{
+#categories {
     position: relative;
     top: 70px;
     border: solid thin $text-secondary;
@@ -72,7 +75,7 @@ p{
     justify-content: center;
 }
 
-.home-list-container{
+.home-list-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -80,19 +83,18 @@ p{
     gap: 2rem;
 }
 
-.home-list-item{
+.home-list-item {
     width: 90px;
     height: 1.5rem;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     border: solid thin $text-secondary;
     border-radius: 5px;
     background-color: $text-secondary;
     color: $main-color;
 
-   
-}
 
+}

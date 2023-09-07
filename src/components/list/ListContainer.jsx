@@ -1,58 +1,47 @@
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
-import { useParams } from "react-router";
-import { db } from "../../../firebaseCofing";
-import {getDocs,collection,query,where} from "firebase/firestore"
+import { useParams } from "react-router-dom";
+import { db } from "../../firebaseCofing";
+import List from "./List";
 
 
-
-const ItemListContainer = () => {
-
+const ListContainer = () => {
   // crear variable para almacenar products
   const [items, setItems] = useState([]);
 
-  const {name} = useParams();
-
+  const { name } = useParams();
 
   //useffect menajando FIREBASE
-  useEffect(()=>{
-
+  useEffect(() => {
     // consultar todos los prods para home
     let productsCollection = collection(db, "products");
 
     let consulta;
 
     //elegir que products renderizar dependiendo de variable name
-    if(name){
-
+    if (name) {
       // prods a renderizar si hay categoria (si se hace afuera, name es undefined y se putea)
       consulta = query(productsCollection, where("category", "==", name));
-    }else{
-      consulta = productsCollection
+    } else {
+      consulta = productsCollection;
     }
 
     // mamejo de promise que devuelve firebase
-    getDocs(consulta).then((res)=>{
-      let productos = res.docs.map((doc)=>{
-        return {id: doc.id, ...doc.data()}
-      })
+    getDocs(consulta).then((res) => {
+      let productos = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
 
-      setItems(productos)
-    })
-  
-      
-  }, [name])
+      setItems(productos);
+    });
+  }, [name]);
 
   //return temprano para cargar eskeleto de loading
 
-  
-  return <ItemList items={items}/>;
-  
-
+  return <List items={items} />;
 };
 
-export default ItemListContainer;
-
+export default ListContainer;
 
 //USEFFECT SIN FIREBASE
 // useEffect(() => {

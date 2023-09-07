@@ -1,12 +1,13 @@
 import { Grid, Skeleton } from "@mui/material";
-import ProductCard from "../../common/ProductCard/ProductCard";
-import "./itemList.css"
 import { Link } from "react-router-dom";
+import ProductCard from "../common/ProductCard/ProductCard";
+import "./list.css"
 
-const ItemList = ({items}) => {
 
+
+const ItemList = ({ items }) => {
   // fictional arr que decide # de skelletons en return
-  const arr = [1, 2, 3, 4]
+  const arr = [1, 2, 3, 4];
 
   return (
     <div className="itemlist-container" style={{ paddingTop: "0px" }}>
@@ -20,13 +21,13 @@ const ItemList = ({items}) => {
       <div id="categories">
         <Grid item xs={8} md={10}>
           <ul className="home-list-container">
-            <Link to="/category/Clásica" style={{textDecoration:"none"}}>
+            <Link to="/category/Clásica" style={{ textDecoration: "none" }}>
               <li className="home-list-item">Clásica</li>
             </Link>
-            <Link to="/category/Deportiva" style={{textDecoration:"none"}}>
+            <Link to="/category/Deportiva" style={{ textDecoration: "none" }}>
               <li className="home-list-item">Deportiva</li>
             </Link>
-            <Link to="/category/Otros" style={{textDecoration:"none"}}>
+            <Link to="/category/Otros" style={{ textDecoration: "none" }}>
               <li className="home-list-item">Otros</li>
             </Link>
           </ul>
@@ -67,7 +68,6 @@ const ItemList = ({items}) => {
       </div>
     </div>
   );
+};
 
-}
-
-export default ItemList
+export default ItemList;
