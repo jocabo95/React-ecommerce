@@ -1,6 +1,6 @@
 import { Grid, Skeleton } from "@mui/material";
 import ProductCard from "../../common/ProductCard/ProductCard";
-import "./itemlist.css"
+import "./itemList.css"
 import { Link } from "react-router-dom";
 
 const ItemList = ({items}) => {
